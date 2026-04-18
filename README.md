@@ -66,23 +66,8 @@ curl "http://localhost:8080/api/v1/sensors?type=Temperature"
 Attempt to delete a room that still has sensors
 curl -X DELETE http://localhost:8080/api/v1/rooms/ENG-101
 
----
 
-## Error Handling
 
-The API uses standard HTTP status codes to indicate errors.
 
-404 is returned when a resource cannot be found.
-409 is returned when attempting to delete a room that still contains sensors.
-422 is returned when a sensor is created with a room that does not exist.
-403 is returned when a sensor is in maintenance mode and cannot accept readings.
-500 is returned for unexpected server errors.
-
----
-
-## Notes
-
-This system uses an in-memory data store, so all data will be lost when the server restarts.
-The project is designed to demonstrate RESTful API principles and is not intended for production use.
 
 
